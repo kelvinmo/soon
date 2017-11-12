@@ -33,7 +33,6 @@ social:
   instagram: "#"
   pinterest: "#"
   linkedin: "#"
-  #icon_size: "fa-2x"
 
 # Build settings
 markdown: kramdown
