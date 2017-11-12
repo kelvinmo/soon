@@ -1,0 +1,31 @@
+// Variables
+$base-font-family: "Roboto", Helvetica, Arial, sans-serif !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.5 !default;
+
+$heading-font-family: "Oswald", Helvetica, Arial, sans-serif !default;
+$heading-font-weight: bold !default;
+$heading-line-height: 1.125 !default;
+
+$size-large:  1.25rem;
+$size-xlarge: 1.5rem;
+
+$text-color:       #fdfdfd !default;
+$background-color: #2a1e20 !default;
+$primary-color:    #9a728d !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$logo-height:        100px !default;
+$content-width:      640px !default;
+$content-min-margin: 20px !default;
+
+$large-form-factor-width: 769px !default;
+
+@import "vendor/minireset",
+        "base",
+        "forms",
+        "layout";

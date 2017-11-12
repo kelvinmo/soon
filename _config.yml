@@ -1,0 +1,53 @@
+# Site settings
+# Site title
+title: Coming Soon
+
+# Site description
+description: A fancy description of the site
+
+# Site background
+background: "images/background.jpg"
+
+# Site logo
+logo: "images/logo.png"
+
+# Countdown clock
+# (This can be commented out if not required.)
+countdown:
+  # format: "2013-09-25 16:00:00 +0800"
+  launch_date: 2020-01-01
+  # %d, %H, %M, %S available
+  format: "%d days, %H hours, %M minutes, %S seconds"
+
+# Mailing list subscription
+# (This can be commented out if not required.)
+subscribe:
+  action: "/thank-you"
+
+# Social media links
+# (This can be commented out if not required.)
+social:
+  facebook: "#"
+  twitter: "#"
+  google: "#"
+  instagram: "#"
+  pinterest: "#"
+  linkedin: "#"
+  #icon_size: "fa-2x"
+
+# Build settings
+markdown: kramdown
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - node_modules
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+   - README.md
+   - COPYING.txt

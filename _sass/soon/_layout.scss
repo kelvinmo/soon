@@ -1,0 +1,53 @@
+/* layout */
+.soon-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.soon-box-wrapper {
+    margin: 0 $content-min-margin;
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+    @media screen and (min-width: $large-form-factor-width), print { 
+        margin: 0 auto;
+        width: $content-width;
+    }
+}
+
+.section {
+    padding: 1.5rem 0;
+}
+
+.main {
+    .brand {
+        &:not(:last-child) {
+            padding-bottom: 1rem;
+        }
+
+        img {
+            display: block;
+            max-height: $logo-height;
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+        }        
+    }
+
+    .content {
+        p, ol, ul, blockquote {
+            font-size: $size-xlarge;
+        }
+    }
+}
+
+.countdown-timer {
+    font-size: $size-xlarge;
+}

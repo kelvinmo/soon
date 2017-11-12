@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="{{ site.title }}" />
+        <meta name="description" content="{{ site.description }}" />
+        <meta property="og:description" content="{{ site.description }}" />
+
+        <title>{{ site.title }}</title>
+
+        <link rel="stylesheet" href="soon.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="soon-box" id="soon-box">
+            <div class="soon-box-wrapper" id="soon-box-wrapper">
+                <section class="section main">
+                    {% if site.logo %}
+                        <div class="subsection brand">
+                            <img src="{{ site.logo }}" class="logo">
+                        </div>
+                    {% endif %}
+
+                    <div class="subsection content">
+                        {{ content }}
+                    </div>
+                </section>
+
+                {% if site.countdown %}
+                    {% include countdown.html %}
+                {% endif %}
+
+                {% if site.subscribe %}
+                    {% include subscribe.html %}
+                {% endif %}
+
+                {% if site.social %}
+                    {% include social.html %}
+                {% endif %}
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var wrappers = document.getElementsByClassName("soon-box-wrapper");
+            [].forEach.call(wrappers, function (wrapper) {
+                var h = wrapper.offsetHeight;
+                wrapper.parentNode.style["min-height"] = h + "px";
+            });
+        </script>
+    </body>
+</html>

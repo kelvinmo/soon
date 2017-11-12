@@ -1,0 +1,49 @@
+<section class="section countdown">
+    <h2>Going live in</h2>
+    <div id="countdown-timer" class="countdown-timer"
+        data-launch-date="{{ site.countdown.launch_date | date: "%s" }}"
+        data-format="{{ site.countdown.format }}">
+        &nbsp;
+    </div>
+</section>
+
+<script type="text/javascript">
+(function() {
+    var el = document.getElementById("countdown-timer");
+
+    var launch_date = new Date(el.getAttribute("data-launch-date") * 1000);
+    var format = el.getAttribute("data-format");
+         
+    var days, hours, minutes, seconds;
+         
+    setInterval(function () {
+        var now = new Date().getTime();
+        var delta = (launch_date - now) / 1000;
+         
+        days = parseInt(delta / 86400);
+        delta = delta % 86400;
+             
+        hours = parseInt(delta / 3600);
+        delta = delta % 3600;
+             
+        minutes = parseInt(delta / 60);
+        seconds = parseInt(delta % 60);
+
+        var context = {
+            d: days,
+            H: hours,
+            M: minutes,
+            S: seconds
+        };
+        var result = format;
+
+        Object.keys(context).forEach(function (key) {
+            result = result.replace(new RegExp("%" + key), context[key]);
+        });
+        result = result.replace(/%%/, '%');
+
+        el.innerHTML = result;
+         
+    }, 1000);
+})();
+</script>

@@ -1,0 +1,14 @@
+---
+---
+
+// You can customise sass variables here
+// A list of variables can be found in _sass/soon/_all.scss
+
+// Import font for default $base-font-family
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto');
+
+{% if site.background %}
+    html { background: url("{{ site.background }}") no-repeat center center fixed; }
+{% endif %}
+
+@import "soon/all";

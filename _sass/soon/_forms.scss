@@ -1,0 +1,128 @@
+@mixin form-control {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    align-items: center;
+    border: 1px solid transparent;
+     // border-radius: $control-radius
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding: calc(0.375em - 1px) calc(0.625em - 1px);
+    position: relative;
+    vertical-align: top;
+    &:focus, &:active { outline: none; }
+}
+
+@mixin form-placeholder {
+    @each $prefix in ':-moz', ':-webkit-input', '-moz', '-ms-input' {
+        &:#{$prefix}-placeholder { @content }
+    }
+}
+
+@mixin form-box {
+    @include form-control;
+    border-color: $grey-color;
+    @include form-placeholder { color: $grey-color; }
+    &:hover { border-color: $grey-color-dark; }
+    &:focus, &:active { border-color: $primary-color; }
+}
+
+.input, .textarea {
+    @include form-box;
+    max-width: 100%;
+    width: 100%;
+    &.is-fullwidth { display: block; }
+    &.is-inline {
+        display: inline;
+        width: auto;
+    }
+}
+
+.textarea {
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0.625em;
+    resize: vertical;
+    &[rows] { height: unset; }
+}
+
+.checkbox, .radio {
+    display: inline-block;
+    line-height: 1.25;
+    position: relative;
+}
+
+.radio + .radio { margin-left: 0.5em }
+
+.select {
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+    vertical-align: top;
+
+    &:not(.is-multiple) { height: 2.25em; }
+
+    select {
+        @include form-box;
+        display: block;
+        font-size: 1em;
+        max-width: 100%;
+        outline: none;
+    }
+}
+
+.button {
+    @include form-control;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $text-color;
+    cursor: pointer;
+    justify-content: center;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    text-align: center;
+    white-space: nowrap;
+
+    .icon {
+        height: 1.5em;
+        width: 1.5em;
+    }
+
+    &:hover {
+        background-color: darken($primary-color, 2.5%);
+        border-color: transparent;
+    }
+
+    &:focus {
+        border-color: lighten($primary-color, 5%);
+    }
+
+    &:active {
+        background-color: darken($primary-color, 5%);
+        border-color: transparent;
+    }
+}
+
+.field {
+    &:not(:last-child) { margin-bottom: 0.75rem; }
+
+    &.has-addons {
+        display: flex;
+        justify-content: flex-start;
+
+        .control {
+            &:not(:last-child) { margin-right: -1px; }
+            &.is-expanded { flex-grow: 1; }
+        }
+    }
+}
+
+.control {
+    font-size: 1rem;
+    position: relative;
+    text-align: left;
+}
