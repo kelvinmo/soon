@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Roboto');
 
 {% if site.background %}
-    html { background: url("{{ site.background }}") no-repeat center center fixed; }
+    html { background: url("{{ site.background }}") top left / cover no-repeat; }
 {% endif %}
 
 @import "soon/all";
