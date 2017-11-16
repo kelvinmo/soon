@@ -32,7 +32,8 @@ social:
   google: "#"
   instagram: "#"
   pinterest: "#"
-  linkedin: "#"
+  snapchat: "#"
+  linkedin: "in/#"
 
 # Build settings
 markdown: kramdown
