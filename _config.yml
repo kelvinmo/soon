@@ -15,7 +15,7 @@ logo: "images/logo.png"
 # (This can be commented out if not required.)
 countdown:
   # format: "2013-09-25 16:00:00 +0800"
-  launch_date: 2025-01-01
+  launch_date: 2030-01-01
   # %d, %H, %M, %S available
   format: "%d days, %H hours, %M minutes, %S seconds"
 
