@@ -1,3 +1,8 @@
+*A version of soon based on [Eleventy] and [Tailwind CSS] is available
+at **[soon-11ty]**.*
+
+----------
+
 # Soon
 
 ## Introduction
@@ -30,3 +35,7 @@ BSD 3 clause.
 
 * Placholder background from [Pexels](https://www.pexels.com/photo/abstract-art-astronomy-background-220071/)
 * Placeholder logo from [LogoDust](http://logodust.com/)
+
+[Eleventy]: https://11ty.dev/
+[Tailwind CSS]: https://tailwindcss.com/
+[soon-11ty]: https://github.com/kelvinmo/soon-11ty
